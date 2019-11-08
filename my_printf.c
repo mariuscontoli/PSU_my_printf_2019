@@ -28,6 +28,7 @@ PTR flags[] = {
         {'c', &print_char},
         {'s', &print_str},
         {'d', &print_nbr},
+        {'i', &print_nbr},
         {'\0', NULL}};
 
 void print_char(va_list ap)
