@@ -46,12 +46,16 @@ void print_nbr(va_list ap)
     my_put_nbr(nb);
 }
 
-void my_printf(char *s, ...)
+void no_flag(char *s, int i, int temp)
 {
-    va_list ap;
-    int temp;
+    if (temp == 0) {
+        my_putchar('%');
+        my_putchar(s[i]);
+    }
+}
 
-    va_start(ap, s);
+void is_flag(char *s, int temp, va_list ap)
+{
     for (int i = 0; s[i] != '\0'; i++) {
         temp = 0;
         if (s[i] == '%') {
@@ -62,13 +66,19 @@ void my_printf(char *s, ...)
                     temp = 1;
                 }
             }
-            if (temp == 0) {
-                my_putchar('%');
-                my_putchar(s[i]);
-            }
+            no_flag(s, i, temp);
         } else {
             my_putchar(s[i]);
         }
-    }
+    } 
+}
+
+void my_printf(char *s, ...)
+{
+    va_list ap;
+    int temp;
+
+    va_start(ap, s);
+    is_flag(s, temp, ap);
     va_end(ap);
 }
