@@ -21,5 +21,7 @@ void print_str(va_list ap);
 void print_char(va_list ap);
 void print_nbr(va_list ap);
 void my_printf(char *s, ...);
+void is_flag(char *s, int temp, va_list ap);
+void no_flag(char *s, int i, int temp);
 
 #endif
