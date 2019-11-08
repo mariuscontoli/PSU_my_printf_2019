@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2019
+** utility functions file
+** File description:
+** regroup used functions for this project
+*/
+
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -50,8 +57,7 @@ int my_getnbr(char const *str)
 
     if (str[0] == '-' && str[1])
         i++;
-    for (; str[i]; i++)
-    {
+    for (; str[i]; i++) {
         if ((str[i] < '0' || str[i] > '9'))
             return (nbr);
         nbr *= 10;
