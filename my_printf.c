@@ -48,7 +48,9 @@ void print_nbr(va_list ap)
 
 void no_flag(char *s, int i, int temp)
 {
-    if (temp == 0) {
+    if (s[i] == '%') {
+        my_putchar(s[i]);
+    } else if (temp == 0) {
         my_putchar('%');
         my_putchar(s[i]);
     }
