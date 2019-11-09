@@ -21,30 +21,8 @@ PTR flags[] = {
         {'s', &print_str},
         {'d', &print_nbr},
         {'i', &print_nbr},
+        {'u', &print_uns_nbr},
         {'\0', NULL}};
-
-void print_char(va_list ap)
-{
-    char charac;
-    charac = va_arg(ap, int);
-    my_putchar(charac);
-}
-
-void print_str(va_list ap)
-{
-    char *str;
-    str = va_arg(ap, char *);
-    if (str != NULL){
-        my_putstr(str);
-    }
-}
-
-void print_nbr(va_list ap)
-{
-    int nb;
-    nb = va_arg(ap, int);
-    my_put_nbr(nb);
-}
 
 void no_flag(char *s, int i, int temp)
 {
