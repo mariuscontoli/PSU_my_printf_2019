@@ -22,6 +22,8 @@ PTR flags[] = {
         {'d', &print_nbr},
         {'i', &print_nbr},
         {'u', &print_uns_nbr},
+        {'x', &print_nbr_hex},
+        {'X', &print_nbr_hexx},
         {'\0', NULL}};
 
 void no_flag(char *s, int i, int temp)
