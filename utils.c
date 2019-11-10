@@ -50,6 +50,42 @@ int my_put_nbr(int nb)
     }
 }
 
+int my_put_nbr_hex(int nb)
+{
+    int modulo;
+    if (nb < 0) {
+        my_putchar('-');
+        nb = nb * (-1);
+    }
+    if (nb > 0) {
+        modulo = (nb % 16);
+        nb = (nb - modulo) / 16;
+        my_put_nbr_hex(nb);
+        if (modulo <= 9)
+            my_putchar(48 + modulo);
+        else
+            my_putchar(87 + modulo);
+    }
+}
+
+int my_put_nbr_hexx(int nb)
+{
+    int modulo;
+    if (nb < 0) {
+        my_putchar('-');
+        nb = nb * (-1);
+    }
+    if (nb > 0) {
+        modulo = (nb % 16);
+        nb = (nb - modulo) / 16;
+        my_put_nbr_hex(nb);
+        if (modulo <= 9)
+            my_putchar(48 + modulo);
+        else
+            my_putchar(55 + modulo);
+    }
+}
+
 unsigned int my_put_nbr_uns(unsigned int nb)
 {
     int modulo;
