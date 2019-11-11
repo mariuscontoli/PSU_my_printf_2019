@@ -38,3 +38,10 @@ void print_nbr_hexx(va_list ap)
     nb = va_arg(ap, int);
     my_put_nbr_hexx(nb);
 }
+
+void print_nbr_oct(va_list ap)
+{
+    int nb;
+    nb = va_arg(ap, int);
+    my_put_nbr_oct(nb);
+}
