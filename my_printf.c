@@ -14,6 +14,7 @@
 PTR flags[] = {
         {'c', &print_char},
         {'s', &print_str},
+        {'S', &print_sstr},
         {'d', &print_nbr},
         {'i', &print_nbr},
         {'u', &print_uns_nbr},
