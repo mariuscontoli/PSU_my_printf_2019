@@ -32,4 +32,9 @@ void my_printf(char *s, ...);
 void is_flag(char *s, int temp, va_list ap);
 void no_flag(char *s, int i, int temp);
 
+typedef struct PTR {
+    char flag;
+    void (*ptr)(va_list ap);
+} PTR;
+
 #endif
