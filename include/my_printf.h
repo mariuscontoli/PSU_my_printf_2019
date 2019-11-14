@@ -14,10 +14,12 @@
 #include <unistd.h>
 
 int my_putstr(char const *str);
+int my_putsstr(char const *str);
 int my_put_nbr(int nb);
 int my_getnbr(char const *str);
 void my_putchar(char c);
 void print_str(va_list ap);
+void print_sstr(va_list ap);
 void print_char(va_list ap);
 void print_nbr(va_list ap);
 void print_nbr_hex(va_list ap);
