@@ -53,7 +53,7 @@ void is_flag(char *s, int temp, va_list ap)
         } else {
             my_putchar(s[i]);
         }
-    } 
+    }
 }
 
 void my_printf(char *s, ...)
