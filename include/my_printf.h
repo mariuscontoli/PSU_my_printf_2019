@@ -16,7 +16,6 @@
 int my_putstr(char const *str);
 int my_putsstr(char const *str);
 int my_put_nbr(int nb);
-int my_getnbr(char const *str);
 void my_putchar(char c);
 void print_str(va_list ap);
 void print_sstr(va_list ap);
@@ -26,7 +25,9 @@ void print_nbr_hex(va_list ap);
 void print_nbr_hexx(va_list ap);
 void print_nbr_oct(va_list ap);
 void print_uns_nbr(va_list ap);
+void print_nbr_bin(va_list ap);
 unsigned int my_put_nbr_uns(unsigned int nb);
+unsigned int my_put_nbr_bin(unsigned int nb);
 int my_put_nbr_oct(int nb);
 int my_put_nbr_hex(int nb);
 int my_put_nbr_hexx(int nb);
