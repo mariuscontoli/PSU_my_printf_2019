@@ -26,3 +26,12 @@ void print_str(va_list ap)
         my_putstr(str);
     }
 }
+
+void print_sstr(va_list ap)
+{
+    char *str;
+    str = va_arg(ap, char *);
+    if (str != NULL) {
+        my_putsstr(str);
+    }
+}
