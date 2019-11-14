@@ -48,22 +48,17 @@ int my_strlen(char const *str)
     return i;
 }
 
-int my_getnbr(char const *str)
+unsigned int my_put_nbr_bin(unsigned int nb)
 {
-    int i = 0;
-    int nbr = 0;
+    int modulo;
 
-    if (str[0] == '-' && str[1])
-        i++;
-    for (; str[i]; i++) {
-        if ((str[i] < '0' || str[i] > '9'))
-            return (nbr);
-        nbr *= 10;
-        nbr += str[i] - 48;
-    }
-    if (str[0] == '-')
-        return (-1 * nbr);
-    else {
-        return nbr;
+    if (nb > 0) {
+        modulo = (nb % 2);
+        nb = (nb - modulo) / 2;
+        my_put_nbr_bin(nb);
+        if (modulo <= 10)
+            my_putchar(48 + modulo);
+        else
+            my_putchar(49 + modulo);
     }
 }
