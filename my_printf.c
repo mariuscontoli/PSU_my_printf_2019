@@ -11,11 +11,6 @@
 #include <unistd.h>
 #include "include/my_printf.h"
 
-typedef struct PTR {
-    char flag;
-    void (*ptr)(va_list ap);
-} PTR;
-
 PTR flags[] = {
         {'c', &print_char},
         {'s', &print_str},
