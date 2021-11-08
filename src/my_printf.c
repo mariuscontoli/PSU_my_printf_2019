@@ -9,7 +9,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "include/my_printf.h"
+#include "my_printf.h"
 
 PTR flags[] = {
         {'c', &print_char},

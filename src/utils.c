@@ -7,7 +7,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#include "include/my_printf.h"
+#include "my_printf.h"
 
 void my_putchar(char c)
 {
